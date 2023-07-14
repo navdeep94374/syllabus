@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Libraries</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Arvo', serif;
+        }
+
+        .bgimg {
+            background: rgba(0, 0, 0, 0.3) url('2021_7$largeimg_417118828.jpg');
+
+            background-blend-mode: darken;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*css of container*/
+        .container {
+            display: grid;
+            /* grid-gap: 1rem;*/
+            grid-template-areas:
+                ' navbar navbar navbar navbar'
+                'body body body body '
+                'signup signup signup signup'
+                'footer footer footer footer  ';
+            width: 100vw;
+            height: 100%;
+        }
+
+        /*gird area of display section*/
+
+        .navbar {
+            grid-area: navbar;
+            padding-top: 30px;
+            height: 4vw;
+            background-color: rgba(0, 0, 0, 0.9);
+            top: 0;
+            position: sticky;
+
+        }
+
+
+        .body {
+            grid-area: body;
+
+
+        }
+
+        .signup {
+            grid-area: signup;
+            background-color: cadetblue;
+
+        }
+
+        .footer {
+            grid-area: footer;
+
+        }
+
+
+
+        /*css of navbar*/
+
+        .heading {
+
+            position: absolute;
+            left: 25px;
+            font-weight: 800;
+            font-size: larger;
+
+            background: linear-gradient(87deg, #5a4bda, #eb427e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .heading2 {
+            font-weight: 800;
+            font-size: larger;
+
+            background: linear-gradient(87deg, #5a4bda, #eb427e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            align-items: center;
+            display: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .navbar ul li {
+            list-style: none;
+            height: -2vw;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            margin-top: -10px;
+            font-size: 20px;
+            margin: 0px 0px;
+            padding: 0px 27px;
+        }
+
+        .signupbutton {
+            border: 3px solid white;
+            border-radius: 3px;
+            margin: -3px 0px;
+        }
+
+        .burger {
+            position: absolute;
+            top: 28px;
+            right: 4px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        .line {
+            width: 33px;
+            background-color: white;
+            height: 4px;
+            margin: 3px 3px;
+        }
+
+        /*hovering on navbar*/
+        .navbar ul li a:hover {
+            border: 2px solid white;
+        }
+
+        /*  Css of body*/
+
+        .body {
+
+            height: 700px;
+
+        }
+
+
+        .years {
+
+            align-items: center;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            height: 600px;
+
+
+        }
+
+
+        .years li {
+            list-style: none;
+        }
+
+        .years li a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-size: 23px;
+
+            border: 3px solid rgba(0, 0, 0, 0.3);
+            padding: 9px 29px;
+            border-radius: 13px;
+
+        }
+
+        .years li ul {
+            margin: 14px 0px;
+            padding: 0px 0px;
+            /* display:flex;
+            flex-direction: column;
+            justify-content: space-around;*/
+
+        }
+
+        .years li ul li {
+            padding: 5px 0px;
+            visibility: hidden;
+        }
+
+        .years li ul li a {
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            font-size: 19px;
+
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 4px 28px;
+            border-radius: 13px;
+        }
+        
+        .syllabus ul li{opacity: 0;}
+
+
+        .years li a:hover {
+
+
+            background: linear-gradient(87deg, #5a4bda, #eb427e);
+        }
+
+        .years li:hover ul li {
+            visibility: visible;
+        }
+
+      
+
+        .years li ul li a:hover {
+            color: white;
+            font-weight: 800;
+        }
+
+        
+       
+
+        
+
+        /*MEDIA QUERY FOR NAVBAR*/
+
+        @media only screen and (max-width:943px) {
+            .heading {
+                display: none;
+            }
+
+
+            .navlist {
+                flex-direction: column;
+                justify-content: space-evenly;
+                place-items: center;
+            }
+
+            .navlist li {
+                padding: 10px 0px;
+            }
+
+            .navbar {
+                height: 280px;
+                transition: all 0.3s ease-out;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .hnav {
+                height: 47px;
+            }
+
+            .vclass li {
+               display: none;
+            }
+
+            .heading2 {
+                display: block;
+                display: grid;
+                place-content: center;
+            }
+
+
+        }
+
+
+
+        /*MEDIA QUERY FOR BODY SECTION*/
+
+        @media only screen and (max-width:680px) {
+            .years {
+
+               
+                display: grid;
+               
+                grid-template-rows: repeat (4,2fr );
+                grid-template-columns: 1fr;
+                place-items: center;
+                height:680px;
+             }
+
+             .name {
+            margin: 0px auto;
+           
+            width: 30%;
+           
+            padding: 10px -3px;
+          
+
+        }
+
+        }
+
+        @media only screen and (max-width:383px){
+
+            .heading2{font-size:15px;}
+            .years li a{font-size:18px;}
+        }
+
+
+
+
+
+        /* Css of sing up section*/
+
+        .contact {
+
+            background-image:url('contactbackground.jpg');
+
+
+           
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .textc {
+            color:white;
+            text-align: center;
+            margin: 12px
+        }
+
+        .name {
+            margin: 0px auto;
+            align-items: center;
+            /* width: auto; */
+            width: 50%;
+            display: flex;
+            padding: 5px 2px;
+            font-size: 15px;
+            border-radius: 5px;
+
+        }
+
+        .btnsub {
+            color: black;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            
+            margin: 5px auto;
+            padding: 3px 0px;
+            border-radius: 7px;
+           
+            background-color: white;
+            width: 20%;
+        }
+
+
+        /*footer css*/
+
+        /* footer css */
+        footer {
+            background-color: #121315;
+            color: #a7a7a7;
+            font-size: 16px;
+        }
+
+        footer * {
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+        }
+
+        .row {
+            padding: 1em 1em;
+        }
+
+        .row.primary {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            align-items: stretch;
+        }
+
+        .column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 2em;
+            min-height: 15em;
+        }
+
+        h3 {
+            width: 100%;
+            text-align: left;
+            color: white;
+            font-size: 1.4em;
+            white-space: nowrap;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li:not(:first-child) {
+            margin-top: 0.8em;
+        }
+
+        footer ul li a {
+            color: #a7a7a7;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: #2a8ded;
+        }
+
+        .about p {
+            text-align: justify;
+            line-height: 2;
+            margin: 0;
+        }
+
+        input,
+        button {
+            font-size: 1em;
+            padding: 1em;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #c7940a;
+            color: #ffffff;
+        }
+
+        div.social {
+            display: flex;
+            justify-content: space-around;
+            font-size: 2.4em;
+            flex-direction: row;
+            margin-top: 0.5em;
+        }
+
+        .social i {
+            color: #bac6d9;
+        }
+
+        .copyright {
+            padding: 0.3em 1em;
+            background-color: #25262e;
+        }
+
+        .footer-menu {
+            float: left;
+            margin-top: 10px;
+        }
+
+        .footer-menu a {
+            color: #cfd2d6;
+            padding: 6px;
+
+            text-decoration: none;
+        }
+
+        .footer-menu a:hover {
+            color: #27bcda;
+        }
+
+        .copyright p {
+            font-size: 0.9em;
+            text-align: right;
+        }
+
+        @media screen and (max-width: 850px) {
+            .row.primary {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        .submitbutton {
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar hnav">
+            <span class="heading2">UNIVERSITY LIBRARIES</span>
+
+            <ul class=" navlist vclass">
+                <li class="heading">UNIVERSITY LIBRARIES</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li class="signupbutton"><a href="#register"><strong>Signup</strong></a></li>
+            </ul>
+
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+        </nav>
+
+
+
+        <div class=" body bgimg">
+            <ul class="years">
+                <li class="syllabus"><a href="https://drive.google.com/file/d/1-Epwpv2lJ81SSzNqM0GV5sev8gESgYlq/view?usp=drivesdk">Syllabus</a>
+                   <ul>
+                       <li><a href="#">Semester 2</a></li>
+                       <li><a href="#">Semester 2</a></li>
+                       
+                   </ul>
+                </li>
+
+
+                <li><a href="#">1'st Year</a>
+                    <ul>
+                        <li><a href="sem1-updated.html">Semester 1</a></li>
+                        <li><a href="sem2.html">Semester 2</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="#">2nd Year</a>
+                    <ul>
+                        <li><a href="sem3.html">Semester 3</a></li>
+                        <li><a href="sem4.html">Semester 4</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="#">3rd Year</a>
+                    <ul>
+                        <li><a href="semester5.html">Semester 4</a></li>
+                        <li><a href="semester6.html">Semester 6</a></li>
+                    </ul>
+
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+
+
+        <div class=" signup contact" id="register">
+            <h2 class="textc">Register</h2>
+            <div>
+                <form action="https://formsubmit.co/universitylibraries0008@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" class="name">
+                <br>
+                <input type="text" name="class" class="name" placeholder="Enter your dept.">
+
+                <br>
+                <input type="text" name="phone" class="name" placeholder="Enter your Phone no. ">
+
+                <br>
+
+                <input type="text" name="E-mail" class="name" placeholder="Enter your E-mail ">
+
+                <br>
+
+                <input type="text" name="Age" class="name" placeholder="Enter your Age ">
+                <br>
+                <textarea class="name" name="comment" placeholder="Enter your Comment" rows="4" cols="30"></textarea>
+
+
+
+                <input type="submit" value="Submit" class="btnsub mx-auto">
+
+            </form>
+
+            </div>
+        </div>
+
+
+
+
+
+        <footer class="footer" id="about">
+
+            <div class="row primary">
+                <div class="column about">
+                    <h3>University Libraries</h3>
+                    <p>
+                    Our main focus is to make better learning experience as trouble-free as possible.
+                    From providing all content like  subjects notes and placement materials, Which is need of all students for their preperation.
+                    </p>
+                    <div class="social">
+                       <a href="https://wa.me/918684931095" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>                
+                        <a href="https://instagram.com/navdeepsharma955?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                       
+                        <i class="fa-brands fa-telegram"></i>
+                       <a href="mailto:universitylibraries0008@gmail.com" target="_black"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+               
+                <div class="column links">
+                    <h3>Syllabus Link</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="#faq">1'st Year</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#cookies-policy">2nd Year</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#terms-of-services">3rd Year</a>
+                        </li>
+                       
+
+                    </ul>
+                </div>
+                <div class="column links">
+                    <h3>1'st Year</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="sem1-updated.html">Semester 1</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="sem2.html">Semester 2</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+
+                <div class="column links">
+                    <h3>2nd Year</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="sem3.html">Semester 3</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="sem4.html">Semester 4</a>
+                        </li>
+                       
+
+                    </ul>
+                </div>
+
+                <div class="column links">
+                    <h3>3rd Year</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="semester5.html">Semester 5</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="semester6.html">Semester 6</a>
+                        </li>
+                       
+
+                    </ul>
+                </div>
+               
+                
+            </div>
+
+            <div class="row copyright">
+                
+                <p style="text-align:center">Copyright &copy; 2021</p>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/ad8ca5eb9b.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script>     burger = document.querySelector('.burger');
+        navbar = document.querySelector('.navbar');
+        navlist = document.querySelector('.navlist');
+
+        burger.addEventListener('click', () => {
+            navlist.classList.toggle('vclass');
+            navbar.classList.toggle('hnav');
+        })</script>
+
+</body>
+
+</html>

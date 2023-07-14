@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    *{padding: 0px;
+    margin:0px;}
+  html,body{
+    overflow-x: hidden;
+    
+  }
+   
+    
+    .container{
+      margin-top: 1rem;
+      display: flex;
+      width: 100%;
+      height: 80%;
+      position: relative;
+    }
+    
+    .border{
+      height: 75%;
+      position: absolute;
+      border: 1px solid black;
+      left: 30%;
+      top: 11%;
+    }
+    .left{
+      background-color:#fff;
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .right{
+      background-color: #fff;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 9rem;
+    }
+    
+    i{
+      font-size: 5rem;
+      color: rgb(160,68,255);
+      text-align: center;
+    }
+    .textIcon{
+      font-size: 1.7rem;
+     color: rgb(160,68,255);
+     text-align: center;
+    }
+    
+    h1{
+color: rgb(160,68,255);
+font-size: 5rem;
+    }
+    
+    .textRight{
+      font-size: 2rem;
+    }
+    
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    
+    input,textarea{
+      height: 4rem;
+      width: 80%;
+      padding: 1rem;
+      margin-top: 3rem;
+      border: 1px solid black;
+      font-size: 2.5rem;
+      border-radius: .6rem;
+      outline: none;
+    }
+    textarea{
+      height: 15rem;
+    }
+    button{
+      margin-top: 3rem;
+      width: 30%;
+      font-size: 2.5rem;
+      padding: .8rem;
+    }
+    
+@media screen and (max-width: 757px) {
+  html{
+    font-size: 35%;
+  }
+.container{
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top:0;
+  position: static;
+}
+.border{
+  display: none;
+  position: static;
+}
+i{
+  font-size: 2rem;
+}
+.left,.right{
+  width: 100%;
+  margin-left: 2rem;
+}
+.right{
+  justify-content: flex;
+}
+.left{
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 4rem;
+  border-top: 1px solid black;
+  padding: 2rem;
+}
+i{
+  font-size: 4rem;
+}
+}
+  </style>
+<link rel="stylesheet" href="navbarfootercss.css">
+  
+</head>
+
+<body>
+  
+  <nav class="navbar1 hnav">
+       
+    <span class="heading2">UNIVERSITY LIBRARIES</span>
+    <ul class=" navlist vclass">
+        <li class="heading">UNIVERSITY LIBRARIES</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      
+    </ul>
+
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+</nav>
+  
+<div class="container">
+  
+  <div class="left">
+    <div class="phone">
+      <i class="fa-solid fa-phone"><p class="textIcon">+99999999</p></i>
+      
+    </div>
+    <div class="mail">
+      <i class="fa-solid fa-envelope"><p class="textIcon">m@mail.com</p></i>
+      
+    </div>
+    <div class="insta">
+      <i class="fa-brands fa-instagram"><p class="textIcon">@insta</p></i>
+      
+    </div>
+  </div>
+  <div class="border"></div>
+  <div class="right">
+    <h1>Send us a message </h1>
+<p class="textRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod at debitis facilis similique, ipsa ab rem, quaerat beatae labore magnam error deleniti minus porro.</p>
+    <form>
+      <input type="text" placeholder="Enter your name">
+      <input type="email" placeholder="Enter email">
+      <textarea rows="20" placeholder="Enter your message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer" id="about">
+
+  <div class="row primary">
+      <div class="column about">
+          <h3>University Libraries</h3>
+          <p>
+          Our main focus is to make better learning experience as trouble-free as possible.
+          From providing all content like  subjects notes and placement materials, Which is need of all students for their preperation.
+          </p>
+          <div class="social">
+             <a href="https://wa.me/918684931095" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>                
+              <a href="https://instagram.com/navdeepsharma955?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             
+              <i class="fa-brands fa-telegram"></i>
+             <a href="mailto:universitylibraries0008@gmail.com" target="_black"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+      </div>
+     
+      <div class="column links">
+          <h3>Syllabus Link</h3>
+          <ul>
+              <li>
+                  <a target="_blank" href="#faq">1'st Year</a>
+              </li>
+              <li>
+                  <a target="_blank" href="#cookies-policy">2nd Year</a>
+              </li>
+              <li>
+                  <a target="_blank" href="#terms-of-services">3rd Year</a>
+              </li>
+             
+
+          </ul>
+      </div>
+      <div class="column links">
+          <h3>1'st Year</h3>
+          <ul>
+              <li>
+                  <a target="_blank" href="sem1-updated.html">Semester 1</a>
+              </li>
+              <li>
+                  <a target="_blank" href="sem2.html">Semester 2</a>
+              </li>
+            
+          </ul>
+      </div>
+
+      <div class="column links">
+          <h3>2nd Year</h3>
+          <ul>
+              <li>
+                  <a target="_blank" href="sem3.html">Semester 3</a>
+              </li>
+              <li>
+                  <a target="_blank" href="sem4.html">Semester 4</a>
+              </li>
+             
+
+          </ul>
+      </div>
+
+      <div class="column links">
+          <h3>3rd Year</h3>
+          <ul>
+              <li>
+                  <a target="_blank" href="semester5.html">Semester 5</a>
+              </li>
+              <li>
+                  <a target="_blank" href="semester6.html">Semester 6</a>
+              </li>
+             
+
+          </ul>
+      </div>
+     
+      
+  </div>
+
+  <div class="row copyright">
+      
+      <p style="text-align:center">Copyright &copy; 2021</p>
+  </div>
+
+</footer>
+</div>
+
+<script src="https://kit.fontawesome.com/ad8ca5eb9b.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+crossorigin="anonymous"></script>
+    <script>     burger = document.querySelector('.burger');
+        navbar = document.querySelector('.navbar1');
+        navlist = document.querySelector('.navlist');
+        
+        burger.addEventListener('click', () => {
+            navlist.classList.toggle('vclass');
+            navbar.classList.toggle('hnav');
+        })   </script>
+</body>
+
+</html>
